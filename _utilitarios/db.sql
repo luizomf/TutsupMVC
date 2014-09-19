@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS `tutsup`.`users` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=MYISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+/* USEE: Admin - PASSWORD: admin */
 INSERT INTO `tutsup`.`users` (
   `user_id`,
   `user`,
