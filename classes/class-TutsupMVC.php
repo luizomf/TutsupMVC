@@ -88,7 +88,7 @@ class TutsupMVC
 			// FIM :)
 			return;
 		}
-		
+				
 		// Inclui o arquivo do controlador
 		require_once ABSPATH . '/controllers/' . $this->controlador . '.php';
 		
@@ -108,7 +108,10 @@ class TutsupMVC
 		
 		// Cria o objeto da classe do controlador e envia os parâmentros
 		$this->controlador = new $this->controlador( $this->parametros );
-
+		
+		// Remove caracteres inválidos do nome da ação (método)
+		$this->acao = preg_replace( '/[^a-zA-Z]/i', '', $this->acao );
+		
 		// Se o método indicado existir, executa o método e envia os parâmetros
 		if ( method_exists( $this->controlador, $this->acao ) ) {
 			$this->controlador->{$this->acao}( $this->parametros );
