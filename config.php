@@ -10,7 +10,7 @@ define( 'ABSPATH', dirname( __FILE__ ) );
 define( 'UP_ABSPATH', ABSPATH . '/views/_uploads' );
 
 // URL da home
-define( 'HOME_URI', 'http://127.0.0.1/Cursos/crud/' );
+define( 'HOME_URI', 'http://127.0.0.1/Cursos/crud' );
 
 // Nome do host da base de dados
 define( 'HOSTNAME', 'localhost' );
